@@ -13,3 +13,8 @@ Understanding how the causes and climate categories relate to power outage durat
 
 ### Dataset Details
 Each observation contains a single power outage event. The dataset contains 1534 rows of data. The columns that we used includes Climate Category, Cause Category, Outage Duration, Customers Affected, and Total Price. Climate Category referes to the climate condition when the outage happened. Cause Category refers to the cause of the outage. Outage Duration refers to the length of the outage. Customers Affected refers to the number of customers affected by the outage. Total Price refers to cents per kilowatthour that customers pay during the outage.
+
+## Data Cleaning & Exploratory Data Analysis
+
+### Data Cleaning
+The first step that we took was dropping any unnecessary rows and columns that do not contain any data to create a tidy dataset. The second step was quering the columns mentioned above to prepare it for analysis. The third step was checking for missing values within each column. The last step was filling in those missing values. For columns with numerical variables (Outage Duration, Customers Affected, Total Price), we fill the missing values with 0. For columns with categorical variables (Climate Category, Cause Category), we fill the missing values through probabilistic imputation. Because we fill in the numerical columns with 0, this might skew the central tendancy of the data which increases the error in our analysis. 
