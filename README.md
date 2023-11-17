@@ -67,6 +67,8 @@ Hence we are interested to perform permutations tests on these three columns wit
 Null Hypothesis: The missingness of OUTAGE.DURATION does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of OUTAGE.DURATION depend on CAUSE.CATEGORY
 
+<iframe src="assets/OD_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
+
 <iframe src="assets/OutageDurationDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column OUTAGE.DURATION: 0.006644518272425249
 
@@ -76,6 +78,8 @@ With a significance level of 0.1, we fail to reject the null hypothesis. Hence O
 Null Hypothesis: The missingness of CUSTOMERS.AFFECTED does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of CUSTOMERS.AFFECTED depend on CAUSE.CATEGORY
 
+<iframe src="assets/CAM_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
+
 <iframe src="assets/CustomersAffectedDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column CUSTOMERS.AFFECTED: 0.0033222591362126247
 
@@ -84,6 +88,8 @@ With a significance level of 0.1, we fail to reject the null hypothesis. Hence C
 #### MAR Analysis for TOTAL.PRICE
 Null Hypothesis: The missingness of TOTAL.PRICE does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of TOTAL.PRICE depend on CAUSE.CATEGORY
+
+<iframe src="assets/TPM_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
 
 <iframe src="assets/TotalPriceDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column TOTAL.PRICE: 0.07641196013289037
