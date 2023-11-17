@@ -73,7 +73,7 @@ With a significance level of 0.1, we fail to reject the null hypothesis. Hence O
 Null Hypothesis: The missingness of CUSTOMERS.AFFECTED does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of CUSTOMERS.AFFECTED depend on CAUSE.CATEGORY
 
-<iframe src="assets/TotalDurationDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/CustomersAffectedDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column CUSTOMERS.AFFECTED: 0.0033222591362126247
 
 With a significance level of 0.1, we fail to reject the null hypothesis. Hence CUSTOMERS.AFFECTED is MAR
