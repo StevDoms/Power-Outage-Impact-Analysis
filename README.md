@@ -33,6 +33,14 @@ The first step that we took was dropping any unnecessary rows and columns that d
 
 The distribution of the Outage Duration is right skewed and most of the values are clustered within 0 - 2999 mins. The right-skewed distribution of Outage Duration indicates that the majority of recorded outage events have relatively shorter durations, predominantly falling within the range of 0 to 2999 minutes, with fewer instances of longer-lasting outages.
 
+<iframe src="assets/CustomersAffectedDistribution.html.html" width=800 height=600 frameBorder=0></iframe>
+
+The distribution of the Customers Affected is right skewed and most of the values are clustered within 0 - 149,000 people.
+
+<iframe src="assets/TotalPriceDistribution.html" width=800 height=600 frameBorder=0></iframe>
+
+The distribution of the Customers Affected is partially normally distributed.
+
 ### Bivariate Analysis
 
 <iframe src="assets/OutageDurationByCause.html" width=800 height=600 frameBorder=0></iframe>
@@ -99,3 +107,33 @@ The graph above shows the distribution of the missigness TOTAL.PRICE based on th
 P-value for column TOTAL.PRICE: 0.07641196013289037
 
 With a significance level of 0.1, we fail to reject the null hypothesis since the p-value we obtained from conducting 300 permutatioon tests resulted in a p-value of around 0.07 which is lower than the significance value. Although this time the p-value is lower than the significance level of 0.01, changing the significance level to 0.05 or lower will change the outcome of the permutation test. But in our case, we will stick to a significane level of 0.1 and reject the null hypothesis. Notice in the graph in which the cutoff value of our observed statistic shown as a red line strays away from the majority of test statistic distribution. Hence CUSTOMERS.AFFECTED is considered to be MAR.
+
+## Hypothesis Testing
+
+We are conducting a permutation test to check whether the outage duration, numbers of customers affected and total price of electricity differs between 2 different causes namely severe weathers and intentional attack. We chose those 2 causes because they have the largest number of sample data which increases the accuracy of our testing. We think that comparing 2 causes is enough to provide a conclusive result because it allows for a focused and detailed comparison with a substantial amount of data, which enhances the robustness and conclusiveness of our analysis. Since we want to test it on 3 different variables, we will conduct the hypothesis test 3 times.
+
+**Null Hypothesis**: The outage duration from severe weathers and intentional attack comes from the same distribution
+
+**Alternative Hypothesis**: The outage duration from severe weathers is longer than the outage duration from intentional attack
+
+**Test Statistics**: Difference between the group (severe weathers and intentional attack) mean
+
+**Significance Level**: To fortify the reliability of our conclusion concerning diverse impacts, we have chosen a significance level of 5% for our randomized test. This deliberate choice aims to bolster the precision and validity of our test results.
+
+The visualization depicted below illustrates the empirical distribution of our test statistics across 1000 permutations, with the observed test statistics denoted by the red line.
+
+<iframe src="assets/HypothesisTestingDuration.html" width=800 height=600 frameBorder=0></iframe>
+
+Based on the graph above, we obtain a p-value of 0.0 which is less than 0.05. This indicates that our observed statistic is not likely coincidental, and hence we **reject our null hypothesis**.
+
+<iframe src="assets/HypothesisTestingCustomersAffected.html" width=800 height=600 frameBorder=0></iframe>
+
+Based on the graph above, we obtain a p-value of 0.0 which is less than 0.05. This indicates that our observed statistic is not likely coincidental, and hence we **reject our null hypothesis**.
+
+<iframe src="assets/HypothesisTestingTotalPrice.html" width=800 height=600 frameBorder=0></iframe>
+
+Based on the graph above, we obtain a p-value of 0.135 which is higher than 0.05. This indicates that our observed statistic is likely coincidental, and hence we **fail to reject our null hypothesis**.
+
+### Conclusion
+
+Based on our hypothesis tests, we reject the null hypothesis for Outage Duration and numbers of Customers Affected while we fail to reject our null hypothesis for Total Price. In total, we reject 2 null while we fail to reject 1. Hence, we opt to reject the null that both cause come from the same distribution (cause category have no effect on the 3 variables). Although we cannot conclude that cause category cause those variables to increase, it is highly likely that there are some positive association between cause category and the numerical variables aforementioned.
