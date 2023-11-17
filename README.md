@@ -97,4 +97,5 @@ The graph above shows the distribution of the missigness TOTAL.PRICE based on th
 
 <iframe src="assets/TotalPriceDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column TOTAL.PRICE: 0.07641196013289037
+
 With a significance level of 0.1, we fail to reject the null hypothesis since the p-value we obtained from conducting 300 permutatioon tests resulted in a p-value of around 0.07 which is lower than the significance value. Although this time the p-value is lower than the significance level of 0.01, changing the significance level to 0.05 or lower will change the outcome of the permutation test. But in our case, we will stick to a significane level of 0.1 and reject the null hypothesis. Notice in the graph in which the cutoff value of our observed statistic shown as a red line strays away from the majority of test statistic distribution. Hence CUSTOMERS.AFFECTED is considered to be MAR.
