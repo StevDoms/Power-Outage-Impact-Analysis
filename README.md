@@ -68,30 +68,33 @@ Null Hypothesis: The missingness of OUTAGE.DURATION does not depend on CAUSE.CAT
 Alternative Hypothesis: The missingness of OUTAGE.DURATION depend on CAUSE.CATEGORY
 
 <iframe src="assets/OD_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
+The graph above shows the distribution of the missigness OUTAGE.DURATION based on the categories of CAUSE.CATEGORY. We can see from the graph above how the missingness of OUTAGE.DURATION varies depending on different categories of CAUSE.CATEGORY. To confirm, we will conduct a permutation test.
 
 <iframe src="assets/OutageDurationDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column OUTAGE.DURATION: 0.006644518272425249
 
-With a significance level of 0.1, we fail to reject the null hypothesis. Hence OUTAGE.DURATION is MAR
+With a significance level of 0.1, we fail to reject the null hypothesis since the p-value we obtained from conducting 300 permutatioon tests resulted in a p-value of around 0.006 which is significantly lower than the significance value. This also clearly proven in the graph in which the cutoff value of our observed statistic shown as a red line is far away from the test statistic distribution. Hence OUTAGE.DURATION is considered to be MAR.
 
 #### MAR Analysis for CUSTOMERS.AFFECTED
 Null Hypothesis: The missingness of CUSTOMERS.AFFECTED does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of CUSTOMERS.AFFECTED depend on CAUSE.CATEGORY
 
 <iframe src="assets/CAM_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
+The graph above shows the distribution of the missigness CUSTOMERS.AFFECTED based on the categories of CAUSE.CATEGORY. Similar to OUTAGE.DURATION, notice how the graph above also indicates missingness of OUTAGE.DURATION varies depending on different categories of CAUSE.CATEGORY. To confirm, we will conduct a permutation test.
 
 <iframe src="assets/CustomersAffectedDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column CUSTOMERS.AFFECTED: 0.0033222591362126247
 
-With a significance level of 0.1, we fail to reject the null hypothesis. Hence CUSTOMERS.AFFECTED is MAR
+With a significance level of 0.1, we fail to reject the null hypothesis since the p-value we obtained from conducting 300 permutatioon tests resulted in a p-value of around 0.003 which is significantly lower than the significance value. This also clearly proven in the graph in which the cutoff value of our observed statistic shown as a red line is far away from the test statistic distribution. Hence CUSTOMERS.AFFECTED is considered to be MAR.
+
 
 #### MAR Analysis for TOTAL.PRICE
 Null Hypothesis: The missingness of TOTAL.PRICE does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of TOTAL.PRICE depend on CAUSE.CATEGORY
 
 <iframe src="assets/TPM_bar_missing.html" width=800 height=600 frameBorder=0></iframe>
+The graph above shows the distribution of the missigness TOTAL.PRICE based on the categories of CAUSE.CATEGORY. Similar to OUTAGE.DURATION and CUSTOMERS.AFFECTED, notice how the graph above also indicates missingness of TOTAL.PRICE varies depending on different categories of CAUSE.CATEGORY. To confirm, we will conduct a permutation test.
 
 <iframe src="assets/TotalPriceDistributionMissing.html" width=800 height=600 frameBorder=0></iframe>
 P-value for column TOTAL.PRICE: 0.07641196013289037
-
-With a significance level of 0.1, we fail to reject the null hypothesis. Hence TOTAL.PRICE is MAR
+With a significance level of 0.1, we fail to reject the null hypothesis since the p-value we obtained from conducting 300 permutatioon tests resulted in a p-value of around 0.07 which is lower than the significance value. Although this time the p-value is lower than the significance level of 0.01, changing the significance level to 0.05 or lower will change the outcome of the permutation test. But in our case, we will stick to a significane level of 0.1 and reject the null hypothesis. Notice in the graph in which the cutoff value of our observed statistic shown as a red line strays away from the majority of test statistic distribution. Hence CUSTOMERS.AFFECTED is considered to be MAR.
