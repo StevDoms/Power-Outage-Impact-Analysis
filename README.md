@@ -19,4 +19,10 @@ Each observation contains a single power outage event. The dataset contains 1534
 ### Data Cleaning
 The first step that we took was dropping any unnecessary rows and columns that do not contain any data to create a tidy dataset. The second step was quering the columns mentioned above to prepare it for analysis. The third step was checking for missing values within each column. The last step was filling in those missing values. For columns with numerical variables (Outage Duration, Customers Affected, Total Price), we fill the missing values with 0. For columns with categorical variables (Climate Category, Cause Category), we fill the missing values through probabilistic imputation. Because we fill in the numerical columns with 0, this might skew the central tendancy of the data which increases the error in our analysis. 
 
-'| CLIMATE.CATEGORY   | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |   TOTAL.PRICE |\n|:-------------------|:-------------------|------------------:|---------------------:|--------------:|\n| normal             | severe weather     |              3060 |                70000 |          9.28 |\n| normal             | intentional attack |                 1 |                    0 |          9.28 |\n| cold               | severe weather     |              3000 |                70000 |          8.15 |\n| normal             | severe weather     |              2550 |                68200 |          9.19 |\n| warm               | severe weather     |              1740 |               250000 |         10.43 |'s
+| CLIMATE.CATEGORY   | CAUSE.CATEGORY     |   OUTAGE.DURATION |   CUSTOMERS.AFFECTED |   TOTAL.PRICE |
+|:-------------------|:-------------------|------------------:|---------------------:|--------------:|
+| normal             | severe weather     |              3060 |                70000 |          9.28 |
+| normal             | intentional attack |                 1 |                    0 |          9.28 |
+| cold               | severe weather     |              3000 |                70000 |          8.15 |
+| normal             | severe weather     |              2550 |                68200 |          9.19 |
+| warm               | severe weather     |              1740 |               250000 |         10.43 |
