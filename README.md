@@ -33,7 +33,7 @@ The first step that we took was dropping any unnecessary rows and columns that d
 
 The distribution of the Outage Duration is right skewed and most of the values are clustered within 0 - 2999 mins. The right-skewed distribution of Outage Duration indicates that the majority of recorded outage events have relatively shorter durations, predominantly falling within the range of 0 to 2999 minutes, with fewer instances of longer-lasting outages.
 
-<iframe src="assets/CustomersAffectedDistribution.html.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/CustomersAffectedDistribution.html" width=800 height=600 frameBorder=0></iframe>
 
 The distribution of the Customers Affected is right skewed and most of the values are clustered within 0 - 149,000 people.
 
