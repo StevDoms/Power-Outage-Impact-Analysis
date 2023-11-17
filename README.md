@@ -59,7 +59,10 @@ This section focuses on determining the type of missingness on our specified col
 The columns which we are trying to determine whether the columns are NMAR are CUSTOMERS.AFFECTED, OUTAGE.DURATION and TOTAL.PRICE which contains missing values. Since CAUSE.CATEGORY has no missing values, we can use this column as a way to conduct MAR analysis torwards CUSTOMERS.AFFECTED, OUTAGE.DURATION and TOTAL.PRICE. Based on intuition, we may have reason to believe that of these columns are dependent on CAUSE.CATEGORY unless proven otherwise. In other words, the columns with missingness may be systematically linked to the reasons for the outage as this linkage might affect the probability of missingness. Moreover, it is unlikely that these columns are missing by design as the determinants from columns within the dataset does not guarentee predictions torwards missingness on a specific column.
 
 ### MAR Analysis
-In this section, we will conduct a test on MAR dependency on CUSTOMERS.AFFECTED, OUTAGE.DURATION and TOTAL.PRICE. We will conduct a hypothesis tests on these three columns with a significance level of 0.1.
+The columns CUSTOMERS.AFFECTED, OUTAGE.DURATION and TOTAL.PRICE contains missing values while CAUSE.CATEGORY contains no missing values and we can disprove that these columns are NMAR by proving MAR dependency on CAUSE.CATEGORY.
+
+Hence we are interested to perform permutations tests on these three columns with CAUSE.CATEGORY to test their MAR Dependency by using the TVD, calculating the proportion of missing values to not missing values for each category. We conducted a hypothesis tests on these three columns with a significance level of 0.1.
+
 #### MAR Analysis for OUTAGE.DURATION
 Null Hypothesis: The missingness of OUTAGE.DURATION does not depend on CAUSE.CATEGORY
 Alternative Hypothesis: The missingness of OUTAGE.DURATION depend on CAUSE.CATEGORY
