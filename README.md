@@ -27,6 +27,7 @@ The first step that we took was dropping any unnecessary rows and columns that d
 | normal             | severe weather     |              2550 |                68200 |          9.19 |
 | warm               | severe weather     |              1740 |               250000 |         10.43 |
 
+
 ### Univariate Analysis
 
 <iframe src="assets/OutageDurationDistribution.html" width=800 height=600 frameBorder=0></iframe>
