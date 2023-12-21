@@ -2,6 +2,8 @@
 
 This project was done as part of UCSD's DSC80 class.
 
+This page can be viewed at https://stevdoms.github.io/Power-Outage-Impact-Analysis/
+
 ## Introduction
 Our dataset contains the major power outage events in the United States between January 2000 and July 2016.
 
