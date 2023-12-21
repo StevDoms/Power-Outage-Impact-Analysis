@@ -1,6 +1,6 @@
 # Power Outage Impact Analysis
 
-This project was done as part of UCSD's DSC80 class.
+This project was completed as part of the DSC80.
 
 This page can be viewed at https://stevdoms.github.io/Power-Outage-Impact-Analysis/
 
